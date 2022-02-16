@@ -2,18 +2,17 @@ package test
 
 import (
 	"context"
-
+	"fmt"
 	"github.com/plugin-ops/common/action"
 )
 
-type TestAction struct {
-}
-
-func (t *TestAction) Name() string {
+func Name() string {
 	return "TestAction"
 }
 
-func (t *TestAction) Do(ctx context.Context, params ...action.Parameter) ([]action.Parameter, error) {
+func Do(ctx context.Context, params ...action.Parameter) ([]action.Parameter, error) {
+	fmt.Println(params)
+
 	return []action.Parameter{
 		action.NewParameter("Do Test Action"),
 	}, nil

@@ -1,4 +1,4 @@
-module github.com/plugin-ops/plugins
+module github.com/plugin-ops/plugins/test
 
 go 1.17
 
